@@ -28,7 +28,7 @@ public class Tag implements Serializable {
 	
 	@Override
 	public String toString() {
-		return name;
+		return id;
 	}
 
 	public Section getSection() {
