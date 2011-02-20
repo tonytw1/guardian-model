@@ -4,7 +4,7 @@
   <artifactId>guardian-model</artifactId>
   <packaging>jar</packaging>
   <name>Guardian model</name>
-  <version>0.0.2</version>
+  <version>0.0.5</version>
   <build>
   	<plugins>
   		<plugin>
