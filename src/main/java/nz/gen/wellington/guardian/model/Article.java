@@ -231,8 +231,10 @@ public class Article implements Serializable {
 	
 	private MediaElement getMainPictureMediaElement() {
 		for (MediaElement mediaElement : mediaElements) {
-			if (mediaElement.getType().equals("picture") && mediaElement.getWidth() == ARTICLE_MAIN_PICTURE_WIDTH) {
-				return mediaElement;
+			if (mediaElement.getType() != null && mediaElement.getWidth() != null) {
+				if (mediaElement.getType().equals("picture") && mediaElement.getWidth() == ARTICLE_MAIN_PICTURE_WIDTH) {
+					return mediaElement;
+				}
 			}
 		}
 		return null;
