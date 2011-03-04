@@ -89,14 +89,6 @@ public class Article implements Serializable {
 		return null;
 	}
 	
-	@Deprecated
-	public String getCaption() {
-		if (getMainPictureMediaElement() != null) {
-			return getMainPictureMediaElement().getCaption();
-		}
-		return null;
-	}
-	
 	public String getByline() {
 		return byline;
 	}
@@ -221,7 +213,7 @@ public class Article implements Serializable {
 		return false;
 	}
 
-	public String getThumbnailUrl() {	// TODO rename to thumbnail to match content api
+	public String getThumbnail() {
 		return thumbnail;
 	}
 
@@ -229,7 +221,7 @@ public class Article implements Serializable {
 		this.thumbnail = thumbnail;
 	}
 	
-	private MediaElement getMainPictureMediaElement() {
+	public MediaElement getMainPictureMediaElement() {
 		for (MediaElement mediaElement : mediaElements) {
 			if (mediaElement.getType() != null && mediaElement.getWidth() != null) {
 				if (mediaElement.getType().equals("picture") && mediaElement.getWidth() == ARTICLE_MAIN_PICTURE_WIDTH) {
